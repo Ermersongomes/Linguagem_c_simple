@@ -18,12 +18,9 @@ int main()
     for (i = 1; i <= n; i++)
     {
         produto = produto * i;
-
     }
 
-    printf("O produto de 1  a %d e %d \n", n, produto);
-
-
+    printf("O produto de 1 a %d e %d \n", n, produto);
 
     return 0;
 }
