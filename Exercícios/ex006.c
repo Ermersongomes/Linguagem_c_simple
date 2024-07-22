@@ -13,13 +13,12 @@ int main()
     printf("Digite um numero: ");
     scanf("%d", &n);
 
-    for ( i = 1; i <= n ; i++)
+    for (i = 1; i <= n; i++)
     {
         soma = soma + i;
     }
-    
-    printf("A soma de 1 a %d e %d \n", n, soma);
 
+    printf("A soma de 1 a %d e %d \n", n, soma);
 
     return 0;
 }
