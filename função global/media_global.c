@@ -18,6 +18,7 @@ int main()
     //imprimindo a variável global
     printf("media: %f -# %p \n", media, &media);
 
+    //executando a função
     float media = calcula_media(n1, n2, n3);
     printf("media: %f -# %p \n", media, &media);
     
