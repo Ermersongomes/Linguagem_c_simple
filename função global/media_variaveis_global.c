@@ -1,7 +1,9 @@
 #include <stdio.h>
+
 float m = 0;
 float pi = 3.14;
 float media = 0;
+
 //retorna a média entre 3 números
 float calcula_media(float n1, float n2, float n3)
 {
