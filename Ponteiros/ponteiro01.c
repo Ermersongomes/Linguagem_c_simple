@@ -10,7 +10,7 @@ int main()
 
     //p aponta para x
     p = &x; //conteúdo de p é end.memoria de x
-    printf("Valor de p: %p \n", &p);
+    printf("Valor de p: %p \n", p);
 
     return 0;
 }
