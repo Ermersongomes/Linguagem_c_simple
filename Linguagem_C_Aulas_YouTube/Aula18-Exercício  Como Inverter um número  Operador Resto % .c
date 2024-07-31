@@ -9,7 +9,7 @@ int main()
 
     if (num >= 0)
     {
-        do
+        do 
         {
             cifra = num % 10;
             printf("%i", cifra);
@@ -17,13 +17,14 @@ int main()
 
         } while (num != 0);
         printf("\n");
+        
     }
     else if (num < 1)
     {
         num = num * -1;
         printf("-");
 
-        do
+        do 
         {
             cifra = num % 10;
             printf("%i", cifra);
@@ -31,7 +32,10 @@ int main()
 
         } while (num != 0);
         printf("\n");
+
     }
+
+
 
     return 0;
 }
