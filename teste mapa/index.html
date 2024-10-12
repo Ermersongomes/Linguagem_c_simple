@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa de Cidades RN</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+
+            height: 600px;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([-5.7945, -35.211], 8); // Definindo a posição inicial do mapa no RN
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Adicionando os pontos das cidades (coordenadas aproximadas)
+    var cidades = [
+        {nome: "Baía Formosa", lat: -6.3710, lng: -35.0033},
+        {nome: "Barcelona", lat: -5.9469, lng: -35.9246},
+        {nome: "Bento Fernandes", lat: -5.6992, lng: -35.8169},
+        {nome: "Boa Saúde", lat: -6.1604, lng: -35.6034},
+        {nome: "Caiçara do Norte", lat: -5.0705, lng: -36.0701},
+        {nome: "Caiçara do Rio do Vento", lat: -5.7599, lng: -35.9939},
+        {nome: "Canguaretama", lat: -6.3801, lng: -35.1267},
+        {nome: "Ielmo Marinho", lat: -5.8245, lng: -35.5500},
+        {nome: "Jacanã", lat: -6.1863, lng: -36.2049},
+        {nome: "Jandaíra", lat: -5.3527, lng: -36.1271},
+        {nome: "Japi", lat: -6.4651, lng: -35.9329},
+        {nome: "Jardim de Angicos", lat: -5.6492, lng: -35.9736},
+        {nome: "Lagoa Salgada", lat: -6.1246, lng: -35.4721},
+        {nome: "Parazinho", lat: -5.2228, lng: -35.8398},
+        {nome: "Passagem", lat: -6.2724, lng: -35.3714},
+        {nome: "Pedra Grande", lat: -5.1496, lng: -35.8766},
+        {nome: "Pedra Preta", lat: -5.5761, lng: -36.1043},
+        {nome: "Rio do Fogo", lat: -5.2763, lng: -35.3792},
+        {nome: "Ruy Barbosa", lat: -5.4508, lng: -35.9378},
+        {nome: "Santa Maria", lat: -5.8393, lng: -35.6917},
+        {nome: "Santo Antônio", lat: -6.3112, lng: -35.4784},
+        {nome: "São Bento do Norte", lat: -5.0920, lng: -36.0362},
+        {nome: "São Miguel do Gostoso", lat: -5.1235, lng: -35.6359},
+        {nome: "Senador Elói de Souza", lat: -6.0331, lng: -35.6946},
+        {nome: "Serra Caiada", lat: -6.1000, lng: -35.7019},
+        {nome: "Serra de São Bento", lat: -6.4203, lng: -35.7031},
+        {nome: "Sítio Novo", lat: -6.1139, lng: -35.9203},
+        {nome: "Taipu", lat: -5.6308, lng: -35.5916},
+        {nome: "Tibau do Sul", lat: -6.1905, lng: -35.0864}
+    ];
+
+
+    cidades.forEach(function(cidade) {
+        L.marker([cidade.lat, cidade.lng]).addTo(map)
+            .bindPopup(cidade.nome);
+    });
+</script>
+
+</body>
+</html>
